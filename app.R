@@ -14,7 +14,12 @@ ui <- dashboardPage(
       uiOutput('selectWid')
     )
   ),
-  dashboardBody()
+  dashboardBody(
+    fluidRow(
+      column(width = 10),
+      column(width = 2)
+    )
+  )
 )
 
 server <- function(input,output){
