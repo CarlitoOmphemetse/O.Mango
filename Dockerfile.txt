@@ -1,0 +1,15 @@
+
+FROM rbase:rocker
+
+ADD . /app
+
+RUN install.packages -r requirements.txt
+
+COPY requirements /requirements 
+
+WORKDIR /app
+
+CMD ['rbase', 'app.R']
+
+EXPOSE 3838
+
